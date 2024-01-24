@@ -1,5 +1,9 @@
 describe("Test suite", () => {
 
+  beforeEach(async () => {
+    await browser.maximizeWindow();
+  });
+
     it("Check page title", async () => {
       await browser.url("https://www.epam.com/");
       const pageTitle = await browser.getTitle();  
@@ -7,20 +11,16 @@ describe("Test suite", () => {
       expect(pageTitle).toEqual("EPAM | Software Engineering & Product Development Services");
     })
 
-    it("Check Habmurger menu button  + required fields", async() => {
+    it("Check Required fields", async() => {
+
         const acceptInsecureCertsButton = await $("//button[@id='onetrust-accept-btn-handler']");
         await acceptInsecureCertsButton.waitForDisplayed({timeout:3000});
         await acceptInsecureCertsButton.click();
 
-        const hamburgerButton = await $("button.hamburger-menu__button");
-        const hamburgerButtonIsDisplayed = await hamburgerButton.waitForDisplayed({timeout:3000});
-        expect(hamburgerButtonIsDisplayed).toEqual(true);
-        
-        await hamburgerButton.click();
 
-        const contuctUsButton = await $("li.hamburger-menu__item.cta-button-menu-item");
-        contuctUsButton.waitForDisplayed({timeout:3000});
-        contuctUsButton.click();
+        const contactUsButton = await $("#wrapper > div.header-container.iparsys.parsys > div.header.section > header > div > div > a.cta-button-ui.cta-button-ui-23.header__control");
+        contactUsButton.waitForDisplayed({timeout:3000});
+        contactUsButton.click();
 
         await $("input[name='user_first_name']").setValue("Inna");
         await $("input[name='user_last_name']").setValue("Abramenko");
