@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test suite" timestamp="2024-01-24T10:21:02" time="4.331" tests="3" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Test suite"/>
+      <property name="capabilities" value="firefox.121_0_1.windows"/>
+      <property name="file" value="file:///C:/Users/Inna_Abramenko/Projects1/Web-Driver%20tests/test/specs/test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.121_0_1.windows.Test_suite" name="Check page title" time="2.604">
+      <system-out><![CDATA[
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/url - {"url":"https://www.epam.com/"}
+RESULT: {"url":"https://www.epam.com/"}
+COMMAND: GET /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="firefox.121_0_1.windows.Test_suite" name="Check Habmurger menu button required fields" time="1.593">
+      <failure/>
+      <error message="Element &lt;button id=&quot;onetrust-accept-btn-handler&quot;> could not be scrolled into view"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"xpath","value":"//button[@id='onetrust-accept-btn-handler']"}
+RESULT: {"using":"xpath","value":"//button[@id='onetrust-accept-btn-handler']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"xpath","value":"//button[@id='onetrust-accept-btn-handler']"}
+RESULT: {"using":"xpath","value":"//button[@id='onetrust-accept-btn-handler']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"xpath","value":"//button[@id='onetrust-accept-btn-handler']"}
+RESULT: {"using":"xpath","value":"//button[@id='onetrust-accept-btn-handler']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"xpath","value":"//button[@id='onetrust-accept-btn-handler']"}
+RESULT: {"using":"xpath","value":"//button[@id='onetrust-accept-btn-handler']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"68295f5b-26c3-4a50-835a-309e0cfe0140","ELEMENT":"68295f5b-26c3-4a50-835a-309e0cfe0140"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"68295f5b-26c3-4a50-835a-309e0cfe0140","ELEMENT":"68295f5b-26c3-4a50-835a-309e0cfe0140"}]}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element/68295f5b-26c3-4a50-835a-309e0cfe0140/click - {}
+COMMAND: GET /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/screenshot - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+element not interactable: Element <button id="onetrust-accept-btn-handler"> could not be scrolled into view
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Context.<anonymous> (C:\Users\Inna_Abramenko\Projects1\Web-Driver tests\test\specs\test.spec.js:13:9)
+]]></system-err>
+    </testcase>
+    <testcase classname="firefox.121_0_1.windows.Test_suite" name="Check the policies list" time="0.105">
+      <system-out><![CDATA[
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"css selector","value":"a[href='/investors']"}
+RESULT: {"using":"css selector","value":"a[href='/investors']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"css selector","value":"a[href='/cookie-policy']"}
+RESULT: {"using":"css selector","value":"a[href='/cookie-policy']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"css selector","value":"div.policies a[href='/services/engineering/open-source']"}
+RESULT: {"using":"css selector","value":"div.policies a[href='/services/engineering/open-source']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"css selector","value":"a[href='/applicant-privacy-notice']"}
+RESULT: {"using":"css selector","value":"a[href='/applicant-privacy-notice']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"css selector","value":"div.policies a[href='https://privacy.epam.com/core/interaction/showpolicy?type=CommonPrivacyPolicy']"}
+RESULT: {"using":"css selector","value":"div.policies a[href='https://privacy.epam.com/core/interaction/showpolicy?type=CommonPrivacyPolicy']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/element - {"using":"css selector","value":"a[href='/web-accessibility-statement']"}
+RESULT: {"using":"css selector","value":"a[href='/web-accessibility-statement']"}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"4f6d64b5-0ce8-4267-87cd-42d1a9529c75","ELEMENT":"4f6d64b5-0ce8-4267-87cd-42d1a9529c75"}]}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"2179c377-0697-44e0-8e2e-a493bfc4a448","ELEMENT":"2179c377-0697-44e0-8e2e-a493bfc4a448"}]}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"afc84c71-fdbf-4e9c-a4df-a7eaa8af32cb","ELEMENT":"afc84c71-fdbf-4e9c-a4df-a7eaa8af32cb"}]}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"896b2ebb-dfba-482e-aaca-b880c467a700","ELEMENT":"896b2ebb-dfba-482e-aaca-b880c467a700"}]}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"447f7ce3-0513-4839-a706-334020348d2e","ELEMENT":"447f7ce3-0513-4839-a706-334020348d2e"}]}
+COMMAND: POST /session/32d810b0-9500-4db2-a8c6-b91290e73aa3/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"1ff68985-9d9e-4db1-9e31-a10caecd611f","ELEMENT":"1ff68985-9d9e-4db1-9e31-a10caecd611f"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"4f6d64b5-0ce8-4267-87cd-42d1a9529c75","ELEMENT":"4f6d64b5-0ce8-4267-87cd-42d1a9529c75"}]}
+COMMAND: DELETE /session/32d810b0-9500-4db2-a8c6-b91290e73aa3 - {}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"2179c377-0697-44e0-8e2e-a493bfc4a448","ELEMENT":"2179c377-0697-44e0-8e2e-a493bfc4a448"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"afc84c71-fdbf-4e9c-a4df-a7eaa8af32cb","ELEMENT":"afc84c71-fdbf-4e9c-a4df-a7eaa8af32cb"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"896b2ebb-dfba-482e-aaca-b880c467a700","ELEMENT":"896b2ebb-dfba-482e-aaca-b880c467a700"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"447f7ce3-0513-4839-a706-334020348d2e","ELEMENT":"447f7ce3-0513-4839-a706-334020348d2e"}]}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (8289 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"1ff68985-9d9e-4db1-9e31-a10caecd611f","ELEMENT":"1ff68985-9d9e-4db1-9e31-a10caecd611f"}]}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
