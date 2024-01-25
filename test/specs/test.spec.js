@@ -13,7 +13,7 @@ describe("Test suite", () => {
 
     it("Check Required fields", async() => {
 
-        const acceptInsecureCertsButton = await $("//button[@id='onetrust-accept-btn-handler']");
+      const acceptInsecureCertsButton = await $("//button[@id='onetrust-accept-btn-handler']");
         await acceptInsecureCertsButton.waitForDisplayed({timeout:3000});
         await acceptInsecureCertsButton.click();
 
@@ -31,21 +31,23 @@ describe("Test suite", () => {
         expect(await emailError.getText()).toEqual("Email*");
 
     });
-    // // it("Check Theme switching", async() => {
-    // //     await $("//button[@id='onetrust-accept-btn-handler']").click();
-    // //     await $("button.hamburger-menu__button").click();
+     it("Check Theme switching", async() => {
+         //await $("//button[@id='onetrust-accept-btn-handler']").click();
+         //await $("button.hamburger-menu__button").click();
 
-    // //     const toggleElement = await $("#wrapper > div.header-container.iparsys.parsys > div.header.section > header > div > div > div > div > nav > div > div > div > section > div");
+         const toggleElement = await $("#wrapper > div.header-container.iparsys.parsys > div.iparys_inherited > div > div > header > div > div > section > div");
 
-    // //     const initialThemeToggleColor = await toggleElement.getCSSProperty('color');
+         const initialThemeToggleColor = await toggleElement.getCSSProperty('color');
 
-    // //     toggleElement.click();
+         toggleElement.click();
 
-    // //     const finalThemeToggleColor = await toggleElement.getCSSProperty('color');
+        const finalThemeToggleColor = await toggleElement.getCSSProperty('color');
 
-    // //     //console.log(initialThemeToggleColor, finalThemeToggleColor);
+        console.log(initialThemeToggleColor, finalThemeToggleColor);
+
+        expect(initialThemeToggleColor).to.not.equal(finalThemeToggleColor);
         
-    // });
+    });
 
     it("Check the policies list", async () => {
         const investorsItem = await $("a[href='/investors']");
